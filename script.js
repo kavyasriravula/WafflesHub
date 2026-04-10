@@ -1,4 +1,3 @@
-// Data from Waffles Hub Menu Image
 const waffles = [
     { name: "Dark & White Delight", price: "₹59 / ₹99", desc: "A heavenly mix of dark and white chocolate on a crispy base.", image: "dark and white.jpg" },
     { name: "Double Chocolate", price: "₹59 / ₹99", desc: "Rich and gooey double chocolate goodness.", image: "double chocolate.jpg" },
@@ -26,7 +25,6 @@ const customs = [
     "Choco Chips (+10)", "Oreo (+10)", "Nutella (+15)", "Kit-Kat (+15)", "Chocolate (+15)", "Biscoff (+15)"
 ];
 
-// Functions to populate the page
 function populateMenu(data, elementId) {
     const list = document.getElementById(elementId);
     if (!list) return;
@@ -59,32 +57,26 @@ function populateTags(data, elementId) {
 }
 
 function showTab(tabId, btn) {
-    // Hide all tab contents
     const contents = document.querySelectorAll('.tab-content');
     contents.forEach(content => content.classList.remove('active'));
 
-    // Remove active class from all buttons
     const buttons = document.querySelectorAll('.tab-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    // Show the selected tab content
     const selectedContent = document.getElementById(tabId);
     if (selectedContent) selectedContent.classList.add('active');
 
-    // Add active class to the clicked button
     if (btn) {
         btn.classList.add('active');
     } else {
-        // Fallback: Find by textContent if called without btn context
         const clickedButton = Array.from(buttons).find(b => b.textContent.toLowerCase().includes(tabId.replace('-', ' ')));
         if (clickedButton) clickedButton.classList.add('active');
     }
 }
 
-// Run functions on load
 window.onload = () => {
 
     populateMenu(waffles, 'waffle-list');
     populateMenu(cakeBowls, 'cake-bowl-list');
     populateTags(customs, 'custom-list');
-};
+};
