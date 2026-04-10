@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waffles Hub | Pure Veg Waffles & Cakes Bowls</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Abril+Fatface&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Waffles<span>Hub</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content" style="max-width: 900px; padding: 0 20px;">
+            <h1>Waffle Your Way to Happiness.</h1>
+            <p style="font-size: 1.25rem; font-weight: 500; margin-bottom: 30px;">From the crunch of our Triple Belgium
+                to the sweetness of our Naughty Nutella, every bite is a delight.</p>
+        </div>
+    </header>
+
+    <section id="about" class="about-section"
+        style="padding: 100px 0; background: var(--cream); text-align: left; color: var(--chocolate);">
+        <div class="container">
+            <div class="about-content"
+                style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px; max-width: 1100px; margin: 0 auto; text-align: left;">
+                <div class="about-text" style="flex: 1; min-width: 300px; font-size: 1.15rem; line-height: 1.8;">
+                    <h2 class="section-title" style="margin-bottom: 25px; font-size: 3rem;">Our Story</h2>
+                    <p>Welcome to <strong>Waffles Hub</strong>! We are passionate about desserts and believe that every
+                        waffle should be a masterpiece. Starting as a small kiosk with homemade recipes, our mission has
+                        always been to serve happiness on a plate.</p>
+                    <p style="margin-top: 15px;">We use only the finest, freshest, 100% pure veg ingredients. Whether
+                        you're craving something chocolaty, fruity, or wonderfully crispy, our waffles are made fresh to
+                        order, just for you.</p>
+                </div>
+                <div class="about-images"
+                    style="flex: 1; min-width: 300px; display: flex; justify-content: center; gap: 20px; position: relative;">
+                    <img src="about-img1.png" alt="Fresh batter waffle making"
+                        style="width: 45%; max-height: 400px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transform: translateY(-20px); object-fit: cover;">
+                    <img src="about-img2.jpg" alt="Chocolate waffle"
+                        style="width: 45%; max-height: 400px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transform: translateY(20px); object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar"
+        style="background: var(--waffle); padding: 40px 0; color: var(--chocolate); box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative; z-index: 10;">
+        <div class="container"
+            style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; text-align: center;">
+            <div class="stat-item" style="flex: 1; min-width: 200px;">
+                <h3
+                    style="font-size: 2.8rem; font-family: 'Playfair Display', serif; color: var(--chocolate); margin-bottom: 5px;">
+                    500+</h3>
+                <p style="text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem; font-weight: 600;">Happy
+                    Customers</p>
+            </div>
+            <div class="stat-item" style="flex: 1; min-width: 200px;">
+                <h3
+                    style="font-size: 2.8rem; font-family: 'Playfair Display', serif; color: var(--chocolate); margin-bottom: 5px;">
+                    20+</h3>
+                <p style="text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem; font-weight: 600;">Waffle
+                    Flavours</p>
+            </div>
+            <div class="stat-item" style="flex: 1; min-width: 200px;">
+                <h3
+                    style="font-size: 2.8rem; font-family: 'Playfair Display', serif; color: var(--chocolate); margin-bottom: 5px;">
+                    100%</h3>
+                <p style="text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem; font-weight: 600;">Pure
+                    Veg</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section"
+        style="background: linear-gradient(rgba(255, 247, 245, 0.85), rgba(255, 247, 245, 0.85)), url('about-bg.jpg') center/cover; box-shadow: inset 0 0 50px rgba(0,0,0,0.05);">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="showTab('waffles', this)">Waffles</button>
+                <button class="tab-btn" onclick="showTab('cake-bowls', this)">Cake Bowls</button>
+            </div>
+
+            <div class="menu-container">
+                <div id="waffles" class="tab-content active">
+                    <div class="menu-category">
+                        <div class="category-header">
+                            <h3></span> Waffles</h3>
+                            <span class="subtitle">Mini & Large</span>
+                        </div>
+                        <ul id="waffle-list" class="waffle-grid">
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="cake-bowls" class="tab-content">
+                    <div class="menu-category">
+                        <div class="category-header">
+                            <h3></span> Cake Bowls</h3>
+                            <span class="subtitle">Moist & Indulgent</span>
+                        </div>
+                        <ul id="cake-bowl-list" class="waffle-grid">
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="custom-box">
+                    <h3>Customizations</h3>
+                    <ul id="custom-list" class="custom-tags">
+                    </ul>
+                </div>
+            </div>
+
+    </section>
+
+    <section id="reviews" class="reviews-section" style="background: var(--honey);">
+        <div class="container">
+            <h2 class="section-title">What Our Fans Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Honestly the best waffles I've ever had. The Naughty Nutella is absolutely insane — crispy
+                        outside, soft inside."</p>
+                    <div class="user">
+                        <div class="avatar" style="background:#ff7675">S</div>
+                        <div>
+                            <span class="uname">Shruthika</span>
+                            <span class="usource">via Swiggy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Ordered KitKat Crunch and a Cake Bowl. Both were phenomenal. Fast delivery, great packaging.
+                        10/10!"</p>
+                    <div class="user">
+                        <div class="avatar" style="background:#fab1a0">A</div>
+                        <div>
+                            <span class="uname">Aashrit Reddy</span>
+                            <span class="usource">via Zomato</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The Biscoff waffle is a game changer. Pure veg and still so rich and indulgent. My family loves
+                        it!"</p>
+                    <div class="user">
+                        <div class="avatar" style="background:#fdcb6e">H</div>
+                        <div>
+                            <span class="uname">Hruthika</span>
+                            <span class="usource">via Swiggy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Triple Belgium waffle every weekend — it's become a ritual. Consistent quality every single
+                        time!"</p>
+                    <div class="user">
+                        <div class="avatar" style="background:#55efc4">N</div>
+                        <div>
+                            <span class="uname">Neha K</span>
+                            <span class="usource">via Swiggy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section" style="background: var(--white); text-align: left;">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 40px; text-align: center;">Contact & Order</h2>
+            <div class="contact-wrapper"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 15px; font-family: 'Playfair Display', serif;">Visit Us</h3>
+                    <p><strong>Address:</strong><br>Father Balaiah Nagar Road, Old Alwal, Secunderabad,
+                        Telangana 500010</p>
+                    <p style="margin-top:15px;"><strong>Opening Hours:</strong><br>Mon-Sun: 11:00 AM - 11:00 PM</p>
+                    <p style="margin-top:15px;"><strong>Phone for Orders:</strong><br><a href="tel:+919390582519"
+                            style="color:var(--chocolate); text-decoration:none; font-weight:bold; font-size: 1.2rem;">+91
+                            93905 82519</a></p>
+
+                    <h3 style="margin-top:30px; font-family: 'Playfair Display', serif;">Order Online</h3>
+                    <p style="margin-top:10px; margin-bottom:15px; color: #666; font-size: 0.95rem;">Prefer delivery?
+                        You
+                        can also conveniently order online from Swiggy or Zomato!</p>
+                    <div class="partner-logos" style="justify-content: flex-start;">
+                        <img src="swiggy.jpg" alt="Swiggy" title="Order on Swiggy" style="cursor: pointer;">
+                        <img src="zomato.jpg" alt="Zomato" title="Order on Zomato" style="cursor: pointer;">
+                    </div>
+                </div>
+                <div class="contact-form-box"
+                    style="background:var(--cream); padding:30px; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    <h3 style="margin-bottom: 20px; font-family: 'Playfair Display', serif;">Drop a Message</h3>
+                    <form action="https://formspree.io/f/meepbgwa" method="POST">
+                        <input type="text" name="name" placeholder="Your Name"
+                            style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:5px; font-family: 'Jost', sans-serif;"
+                            required>
+                        <input type="email" name="email" placeholder="Your Email"
+                            style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:5px; font-family: 'Jost', sans-serif;"
+                            required>
+                        <textarea name="message" placeholder="Message" rows="4"
+                            style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:5px; font-family: 'Jost', sans-serif;"
+                            required></textarea>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 2026 Waffles Hub. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
